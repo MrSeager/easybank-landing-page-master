@@ -4,6 +4,7 @@ body{
 	margin: auto;
 	cursor: default;
 	background-color: white;
+	margin: auto;
 }
 
 .mobilebtn{
@@ -19,7 +20,8 @@ header{
 	justify-content: space-between;
 	align-items: stretch;
 	background-color: hsl(0, 0%, 100%);
-	z-index: 1;
+	z-index: 2;
+	position: relative;
 }
 
 .logo{
@@ -67,6 +69,29 @@ header{
 	color: hsl(233, 26%, 24%);
 	border-bottom: solid 5px;
 	border-image: linear-gradient(90deg, rgba(49,211,92,1) 0%, rgba(43,183,218,1) 100%) 1;
+}
+
+#mobilenav{
+	position: fixed;
+	top: 15%;
+	left: 5%;
+	width: 90%;
+	height: 45%;
+	z-index: 1;
+	padding: 5% 0;
+	
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	
+	background-color: hsl(0, 0%, 100%);
+	border-radius: 5px;
+	box-shadow: 0px 30px 30px 60px rgba(0,0,0,0.1);
+}
+
+#mobilenav a{
+	margin: 3% 0;
+	color: hsl(233, 26%, 24%);
 }
 
 main{
@@ -183,12 +208,14 @@ main{
 .s3 div{
 	background-color: hsl(0, 0%, 100%);
 	padding-bottom: 8%;
+	border-radius: 5px;
 }
 
 .s3 div img{
 	object-fit: cover;
 	width: 100%;
 	height: 50%;
+	border-radius: 5px 5px 0 0;
 }
 
 .s3 div h4{
@@ -286,6 +313,11 @@ footer p{
 		width: 375px;
 	}
 	
+	header{
+		position: fixed;
+		width: 100%;
+	}
+	
 	.logo{
 		margin: 3% 0 3% 5%;
 	}
@@ -306,7 +338,8 @@ footer p{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		align-items: center;
+		text-align: center;
+		padding: 0 2%;
 	}
 	
 	.s1 div{
@@ -328,7 +361,6 @@ footer p{
 	
 	.s1 h1{
 		order: 2;
-		text-align: center;
 		margin-top: 0;
 		font-size: 40px;
 	}
@@ -343,5 +375,81 @@ footer p{
 		order: 4;
 		margin-top: 5%;
 		margin-bottom: 25%;
+	}
+	
+	.s2{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 10% 5% 15% 5%;
+	}
+	
+	.s2 h2{
+		font-size: 30px;
+		padding: 0 5% 5% 5%;
+	}
+	
+	.s2mainp{
+		padding: 0 2% 10% 2%;
+	}
+	
+	.s2 div{
+		margin-top: 5%;
+	}
+	
+	.s3{
+		display: flex;
+		flex-direction: column;
+		padding: 10% 5% 15% 5%;
+	}
+	
+	.s3 h2{
+		text-align: center;
+		font-size: 30px;
+		padding-bottom: 10%;
+	}
+	
+	.s3 div{
+		margin-bottom: 5%;
+	}
+	
+	footer{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		padding: 10% 0 15% 0;
+	}
+	
+	footer img{
+		order: 1;
+	}
+	
+	.social{
+		order: 2;
+		margin-top: 5%;
+		width: 45%;
+	}
+	
+	.links{
+		order: 3;
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+	
+	.links a{
+		margin: 5% 0;
+		font-size: 15px;
+	}
+	
+	footer button{
+		order: 4;
+	}
+	
+	footer p{
+		order: 5;
+		justify-self: center;
+		align-self: center;		
 	}
 }
